@@ -11,7 +11,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 # Install NodeJS
 sudo apt-get install -y nodejs
 ```
-* The last command installs both NodeJS and NPM, a package manager for Node. Confirm the installation of both Node and NPM. 
+* The previous command installs both NodeJS and NPM, a package manager for Node. Confirm the installation of both Node and NPM. 
 ```bash
 node -v
 npm -v
@@ -145,7 +145,7 @@ const Todo = mongoose.model('todo', TodoSchema);
 
 module.exports = Todo;
 ```
-* Update the route in api.js to make use of the new model. Navigate back to routes directory. Delete all the code in api.js and replace with the following. 
+* Next, update the route in api.js to make use of the new model. To do so, navigate back to routes directory. Delete all the code in api.js and replace with the following. 
 ```js
 const express = require ('express');
 const router = express.Router();
@@ -239,7 +239,7 @@ node index.js
 * The database is now connected so the next step is to test the code. As the front-end is yet to be configured, make use of Postman, a REST API development client. 
 ### Testing 
 * Create an account on Postman. You can either use the browser or download a desktop version. 
-* The API endpoint is http://<PublicIP-or-PublicDNS>:5000/api/todos
+* The API endpoint is `http://<PublicIP-or-PublicDNS>:5000/api/todos`
 1. POST - add an item to To-Do list. 
     * Select POST as request type.
     * Add the endpoint 
@@ -355,7 +355,7 @@ vi package.json
 "proxy": "http://localhost:5000",
 ```
 ![Configure Proxy](/images/configure_proxy.png)
-* This allows the app to be accessed by calling the url rather than the entire path i.e. http://localhost:5000/api/todos
+* This allows the app to be accessed by calling the url rather than the entire path i.e. `http://localhost:5000/api/todos`
 * Return to Todo directory and run 
 ```
 npm run dev
